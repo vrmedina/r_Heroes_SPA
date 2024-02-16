@@ -1,5 +1,16 @@
-import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { DcPage, ErrorPage, HeroesRootPage, MarvelPage  } from "../heroes";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import {
+  DcPage,
+  ErrorPage,
+  HeroPage,
+  HeroesRootPage,
+  MarvelPage,
+  SearchPage,
+} from "../heroes";
 import { AuthRootPage, LoginPage } from "../auth";
 
 const appRouter = createBrowserRouter([
@@ -30,6 +41,14 @@ const appRouter = createBrowserRouter([
       {
         path: "dc",
         element: <DcPage />,
+      },
+      {
+        path: "search",
+        element: <SearchPage />,
+      },
+      {
+        path: "hero/:id",
+        element: <HeroPage />,
       },
       {
         path: "",
