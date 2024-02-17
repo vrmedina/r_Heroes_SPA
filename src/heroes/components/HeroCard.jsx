@@ -9,11 +9,12 @@ export const HeroCard = ({
   characters,
 }) => {
   return (
-    <div className="col">
-      <div className="card">
+    <div className="col d-flex">
+      <div className="card animate__animated animate__fadeIn">
         <img
           src={`/assets/heroes/${id}.jpg`}
-          className="card-img-top img-fluid p-2"
+          className="card-img-top img-fluid p-2 m-auto "
+          style={{ "maxHeight": "300px", "maxWidth": "280px", "borderRadius": "15px" }}
           alt={superhero}
         />
         <div className="card-header mb-0 pb-0">
@@ -39,7 +40,13 @@ export const HeroCard = ({
           </ul>
         </div>
         <div className="text-bg-secondary border border-dark border-opacity-50 rounded-bottom">
-          <Link to={`/heroes/hero/${id}`} className="btn btn-secondary w-100 m-0 px-0"> Ver mas...</Link>
+          <Link
+            to={`/heroes/hero/${id}`}
+            className="btn btn-secondary w-100 m-0 px-0"
+          >
+            {" "}
+            See more...
+          </Link>
         </div>
       </div>
     </div>

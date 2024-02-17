@@ -9,8 +9,8 @@ export const HeroDetail = ({
   characters,
 }) => {
   return (
-    <div className="col">
-      <div className="card text-bg-light my-1" style={{ "max-width": "600px" }}>
+    <div className="col d-flex justify-content-center">
+      <div className="card text-bg-light my-1 animate__animated animate__flipInX" style={{ "maxWidth": "600px" }}>
         <div className="row g-0">
           <div className="col-md-4">
             <img
@@ -44,8 +44,7 @@ export const HeroDetail = ({
             </div>
             <div className="card-footer">
               <Link to={-1} className="btn btn-secondary w-50">
-                {" "}
-                Regresar
+                Return
               </Link>
             </div>
           </div>
