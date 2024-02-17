@@ -9,8 +9,15 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-      <Link className={"navbar-brand"} to={`/`}>
-        Asociaciones
+      <Link className="navbar-brand px-2" to={`/`}>
+        <img
+          src="/assets/icons/superman.webp"
+          alt="Logo"
+          width="36"
+          height="36"
+          className="d-inline-block align-text-top"
+        />
+        uperheroes App
       </Link>
 
       <div className="navbar-collapse">
@@ -47,7 +54,6 @@ export const Navbar = () => {
       <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end px-2">
         <ul className="navbar-nav ml-auto">
           <span className="nav-item nav-link text-info">Victor Medina</span>
-
           <button className="nav-item nav-link" onClick={onLogout}>
             Logout
           </button>
