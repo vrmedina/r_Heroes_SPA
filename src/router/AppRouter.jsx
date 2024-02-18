@@ -12,6 +12,7 @@ import {
   SearchPage,
 } from "../heroes";
 import { AuthRootPage, LoginPage } from "../auth";
+import { PrivateRoute } from "./PrivateRoute";
 
 const appRouter = createBrowserRouter([
   {
@@ -29,9 +30,40 @@ const appRouter = createBrowserRouter([
       },
     ],
   },
+  // {
+  //   path: "heroes",
+  //   element: <HeroesRootPage />,
+  //   errorElement: <ErrorPage />,
+  //   children: [
+  //     {
+  //       path: "marvel",
+  //       element: <MarvelPage />,
+  //     },
+  //     {
+  //       path: "dc",
+  //       element: <DcPage />,
+  //     },
+  //     {
+  //       path: "search",
+  //       element: <SearchPage />,
+  //     },
+  //     {
+  //       path: "hero/:id",
+  //       element: <HeroPage />,
+  //     },
+  //     {
+  //       path: "",
+  //       element: <Navigate to={"marvel"} />,
+  //     },
+  //   ],
+  // },
   {
     path: "heroes",
-    element: <HeroesRootPage />,
+    element: (
+      <PrivateRoute>
+        <HeroesRootPage />
+      </PrivateRoute>
+    ),
     errorElement: <ErrorPage />,
     children: [
       {
@@ -57,10 +89,13 @@ const appRouter = createBrowserRouter([
     ],
   },
   {
-    path: "/*",
-    element: <Navigate to={"heroes"} />,
-    errorElement: <ErrorPage />,
-  },
+    path: "*",
+    element: (
+      <PrivateRoute>
+        <Navigate to={"heroes"} />
+      </PrivateRoute>
+    ),
+  }
 ]);
 
 export const AppRouter = () => {
