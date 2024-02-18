@@ -10,7 +10,10 @@ export const HeroDetail = ({
 }) => {
   return (
     <div className="col d-flex justify-content-center">
-      <div className="card text-bg-light my-1 animate__animated animate__flipInX" style={{ "maxWidth": "600px" }}>
+      <div
+        className="card text-bg-light my-1 animate__animated animate__flipInX"
+        style={{ maxWidth: "600px" }}
+      >
         <div className="row g-0">
           <div className="col-md-4">
             <img

@@ -14,7 +14,11 @@ export const HeroCard = ({
         <img
           src={`/assets/heroes/${id}.jpg`}
           className="card-img-top img-fluid p-2 m-auto "
-          style={{ "maxHeight": "300px", "maxWidth": "280px", "borderRadius": "15px" }}
+          style={{
+            maxHeight: "300px",
+            maxWidth: "280px",
+            borderRadius: "15px",
+          }}
           alt={superhero}
         />
         <div className="card-header mb-0 pb-0">
