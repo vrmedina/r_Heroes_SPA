@@ -53,7 +53,7 @@ export const SearchPage = () => {
                 className="alert alert-secondary animate__animated animate__headShake"
                 style={{ display: showSearch ? "" : "none" }}
               >
-                <p className="p-0 m-0">Please search a Superhero first</p>
+                <p className="p-0 m-0">Please introduce the name of a superhero</p>
               </div>
               <div
                 className="alert alert-danger animate__animated animate__headShake"
