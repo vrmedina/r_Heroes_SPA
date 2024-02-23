@@ -32,7 +32,7 @@ export const SearchPage = () => {
             <div className="card-body">
               <h5 className="card-title">Search</h5>
               <hr />
-              <form onSubmit={onSearchSubmit}>
+              <form onSubmit={onSearchSubmit} aria-label="form">
                 <input
                   type="text"
                   placeholder="Search a Superhero"
