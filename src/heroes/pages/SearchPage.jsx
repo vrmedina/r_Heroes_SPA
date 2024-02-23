@@ -52,6 +52,7 @@ export const SearchPage = () => {
               <div
                 className="alert alert-secondary animate__animated animate__headShake"
                 style={{ display: showSearch ? "" : "none" }}
+                aria-label="alert-no-text"
               >
                 <p className="p-0 m-0">
                   Please introduce the name of a superhero
@@ -60,6 +61,7 @@ export const SearchPage = () => {
               <div
                 className="alert alert-danger animate__animated animate__headShake"
                 style={{ display: showError ? "" : "none" }}
+                aria-label="alert-no-hero"
               >
                 <p className="p-0 m-0">
                   We could not find a hero with name <b>{q}</b>
